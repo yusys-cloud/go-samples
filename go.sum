@@ -1,0 +1,4 @@
+github.com/wodog/fastdfs-client v0.0.0-20180607062512-e36d35b057f7 h1:4OmUR22SKgBqCBay2/VGsOCxxIkZiFbk9RDTGkM5PsI=
+github.com/wodog/fastdfs-client v0.0.0-20180607062512-e36d35b057f7/go.mod h1:qEY85qOzCB/cfN0oreeLHCVB6EGSWMTzk34Mo3pG7fE=
+github.com/wodog/pool v0.0.0-20180410092802-20a389ba44e8 h1:QyWzR7BwixnKkW699vcUB3X+DSV3RrMzDSJJIy36cx0=
+github.com/wodog/pool v0.0.0-20180410092802-20a389ba44e8/go.mod h1:LautUmi1hqwksuWd/zV5BVtVHAsvKq7EI45tJOsDqCI=
