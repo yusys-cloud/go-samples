@@ -5,6 +5,8 @@ package file
 
 import (
 	"fmt"
+	"io/ioutil"
+	"log"
 	"os"
 	"strconv"
 	"strings"
@@ -38,4 +40,31 @@ func TestFiles(t *testing.T) {
 	HandleDirFiles(root, func(file *os.File) {
 		fmt.Println(file.Name())
 	})
+}
+
+func TestFilenames(t *testing.T) {
+
+	//var files []string
+	//
+	//root := "/Users/zqy/Downloads/tmp/najie"
+	//err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
+	//	fmt.Println(path)
+	//	files = append(files, path)
+	//	return nil
+	//})
+	//if err != nil {
+	//	panic(err)
+	//}
+	//for _, file := range files {
+	//	fmt.Println(file)
+	//}
+
+	files, err := ioutil.ReadDir("/Users/zqy/Downloads/tmp/najie/yz1")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, file := range files {
+		fmt.Println(file.Name())
+	}
 }
