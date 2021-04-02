@@ -1,0 +1,59 @@
+// Author: yangzq80@gmail.com
+// Date: 2021-02-23
+//
+package base
+
+import (
+	"fmt"
+	"github.com/bwmarrin/snowflake"
+	"testing"
+)
+
+func TestSnowflake(t *testing.T) {
+	// Create a new Node with a Node number of 1
+	node, err := snowflake.NewNode(1)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	// Generate a snowflake ID.
+	id := node.Generate()
+
+	// Print out the ID in a few different ways.
+	fmt.Printf("Int64  ID: %d\n", id)
+	fmt.Printf("String ID: %s\n", id)
+	fmt.Printf("Base2  ID: %s\n", id.Base2())
+	fmt.Printf("Base64 ID: %s\n", id.Base64())
+
+	// Print out the ID's timestamp
+	fmt.Printf("ID Time  : %d\n", id.Time())
+
+	// Print out the ID's node number
+	fmt.Printf("ID Node  : %d\n", id.Node())
+
+	// Print out the ID's sequence number
+	fmt.Printf("ID Step  : %d\n", id.Step())
+
+	// Generate and print, all in one.
+	fmt.Printf("ID       : %d\n", node.Generate().Int64())
+}
+func TestAscii(t *testing.T) {
+	// character to ASCII
+	char := 'a' // rune, not string
+	ascii := int(char)
+	fmt.Println(string(char), " : ", ascii)
+
+	// ASCII to character
+
+	asciiNum := 65 // Uppercase A
+	character := string(asciiNum)
+	fmt.Println(asciiNum, " : ", character)
+
+	str := "109 97 53 56 120 115 115 110 48 125 104 50 108 102 110 121 101 54 123 107 103 118 111 98 55 51 122 114 104 100"
+
+	for _, value := range str {
+		fmt.Println(string(value))
+	}
+	//fmt.Println(strings.Split(str, ""))
+}

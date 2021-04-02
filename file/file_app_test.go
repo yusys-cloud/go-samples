@@ -20,8 +20,16 @@ func TestAppendLine(t *testing.T) {
 }
 
 func TestHandle_lines(t *testing.T) {
-	HandleLines(root+"/t1.txt", func(line string) {
-		fmt.Println(line)
+	HandleLines("/Users/zqy/doc/yusys/plan/sidecar功能清单.adoc", func(line string) {
+		//if strings.HasPrefix(line,"###") {
+		//	fmt.Println(strings.ReplaceAll(line,"### ",""))
+		//}
+		if strings.HasPrefix(line, "###") {
+			fmt.Println()
+		} else if len(line) > 0 {
+			fmt.Println(line)
+		}
+
 	})
 }
 

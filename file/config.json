@@ -1,0 +1,22 @@
+{
+  "apiAddr": ":9999",
+  "proxies": [
+    {
+      "port": ":1000",
+      "target": "127.0.0.1:3306",
+      "desc": "mysql",
+      "ctl": {
+        "in": {
+          "lossRate": 0,
+          "delayMs": 0
+        },
+        "out": {
+          "lossRate": 0,
+          "delayMs": 0
+        }
+      },
+      "timeoutConnect": 5,
+      "timeoutWrite": 30
+    }
+  ]
+}
