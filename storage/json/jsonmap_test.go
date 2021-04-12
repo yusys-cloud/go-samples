@@ -170,11 +170,11 @@ func TestJsonToMaps(t *testing.T) {
 			logrus.Println("send...", freq)
 			rs := jsonvalue.NewObject()
 			rs.SetString(freq).At("reqUrl")
-			rs.SetString(getUrl(freq)).At("respBody")
+			//rs.SetString(getUrl(freq)).At("respBody")
 
 			v.Set(rs).At("runResult")
 
-			logrus.Println(chaos.String())
+			logrus.Println(chaos)
 
 			return true
 		})

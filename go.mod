@@ -1,6 +1,6 @@
 module go-samples
 
-go 1.12
+go 1.14
 
 require (
 	github.com/Andrew-M-C/go.jsonvalue v1.0.5
