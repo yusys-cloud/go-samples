@@ -1,7 +1,7 @@
 # go-samples
 Example of using golang
 
-- [tcp proxy](tcpproxy)
+- [tcp proxy](./proxy/tcpproxy)
 - TCP is a moresophisticated transport protocol is one that offers a reliable, connection oriented byte stream service. Such a service has proven useful to a wide assortment of application because it frees the application from having to worry about missing or reordered data.
 
 ### rabbitmq
@@ -10,7 +10,8 @@ Specifically we looked at:
 2. Single docker
 
 Benchmark #1: 1 publishers, 50k msgs/s per publisher, 1 queues, 1 consumers
-<img width="159px" src="https://raw.githubusercontent.com/gin-gonic/logo/master/color.png">
+![images](./docs/images/rabbitmq-rates-deliver-50k.png)
+![images](./docs/images/rabbitmq-rates-publish-50k.png)
 
 
 ### links
