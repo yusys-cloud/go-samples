@@ -12,6 +12,7 @@ Specifically we looked at:
 Benchmark #1: 1 publishers, 50k msgs/s per publisher, 1 queues, 1 consumers
 ![images](./docs/images/rabbitmq-rates-deliver-50k.png)
 ![images](./docs/images/rabbitmq-rates-publish-50k.png)
+<img width="50px" src="./docs/images/rabbitmq-rates-publish-50k.png">
 
 
 ### links
