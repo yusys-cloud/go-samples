@@ -8,6 +8,7 @@ require (
 	github.com/go-redis/redis/v8 v8.4.0
 	github.com/schollz/jsonstore v1.1.0
 	github.com/sirupsen/logrus v1.4.2
+	github.com/streadway/amqp v1.0.0
 	github.com/thedevsaddam/gojsonq/v2 v2.5.2
 	github.com/urfave/cli/v2 v2.3.0
 	github.com/wodog/fastdfs-client v0.0.0-20180607062512-e36d35b057f7
