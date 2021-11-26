@@ -6,7 +6,9 @@ require (
 	github.com/Andrew-M-C/go.jsonvalue v1.0.5
 	github.com/bwmarrin/snowflake v0.3.0
 	github.com/go-redis/redis/v8 v8.4.0
+	github.com/gorilla/websocket v1.4.2
 	github.com/schollz/jsonstore v1.1.0
+	github.com/shirou/gopsutil/v3 v3.21.10 // indirect
 	github.com/sirupsen/logrus v1.4.2
 	github.com/streadway/amqp v1.0.0
 	github.com/thedevsaddam/gojsonq/v2 v2.5.2
