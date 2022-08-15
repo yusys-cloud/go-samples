@@ -33,7 +33,7 @@ func TestClientCall(t *testing.T) {
 	// Contact the server and print out its response.
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
-	r, err := c.SayHello(ctx, &pb.HelloRequest{Name: "world1"})
+	r, err := c.SayHello(ctx, &pb.HelloRequest{Name: "world1", Attrs: map[string]string{"k": "map-v1"}})
 	if err != nil {
 		log.Fatalf("could not greet: %v", err)
 	}
@@ -61,5 +61,6 @@ type server struct {
 // SayHello implements helloworld.GreeterServer
 func (s *server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
 	log.Printf("Received: %v", in.GetName())
+	log.Printf(in.Attrs["k"])
 	return &pb.HelloReply{Message: "Server reply--->Hello " + in.GetName()}, nil
 }
